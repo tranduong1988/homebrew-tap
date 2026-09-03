@@ -2,8 +2,7 @@ cask "brave-origin-linux" do
   version "1.94.117"
   sha256 "c821c649fc17d451764a771d2b5da5e00515c4d531fdf4896548ca86da3b531e"
 
-  url "https://github.com/brave/brave-browser/releases/download/v#{version}/brave-origin-#{version}-linux-amd64.zip",
-      verified: "github.com/brave/brave-browser/"
+  url "https://github.com/brave/brave-browser/releases/download/v#{version}/brave-origin-#{version}-linux-amd64.zip"
   name "Brave Origin"
   desc "Minimalist version of the Brave browser"
   homepage "https://brave.com/origin/"
