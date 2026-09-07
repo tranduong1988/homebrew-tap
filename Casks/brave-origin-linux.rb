@@ -48,7 +48,7 @@ cask "brave-origin-linux" do
     EOS
   end
 
-  postflight do
+  postflight_steps do
     sandbox = "#{staged_path}/chrome-sandbox"
     FileUtils.chmod(04755, sandbox) if File.exist?(sandbox)
   end
