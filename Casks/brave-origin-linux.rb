@@ -19,10 +19,10 @@ cask "brave-origin-linux" do
            target: "#{Dir.home}/.local/share/icons/brave-origin.png"
 
   preflight_steps do
-    FileUtils.mkdir_p("#{Dir.home}/.local/share/applications")
-    FileUtils.mkdir_p("#{Dir.home}/.local/share/icons")
+    mkdir_p "#{Dir.home}/.local/share/applications"
+    mkdir_p "#{Dir.home}/.local/share/icons"
 
-    File.write("#{staged_path}/brave-origin.desktop", <<~EOS)
+    write_file "#{staged_path}/brave-origin.desktop", <<~EOS
       [Desktop Entry]
       Version=1.0
       Name=Brave Origin
@@ -49,8 +49,7 @@ cask "brave-origin-linux" do
   end
 
   postflight_steps do
-    sandbox = "#{staged_path}/chrome-sandbox"
-    FileUtils.chmod(04755, sandbox) if File.exist?(sandbox)
+    set_permissions "#{staged_path}/chrome-sandbox", "0755"
   end
 
   zap trash: [
