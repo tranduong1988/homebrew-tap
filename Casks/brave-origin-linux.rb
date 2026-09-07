@@ -28,7 +28,7 @@ cask "brave-origin-linux" do
       Name=Brave Origin
       GenericName=Web Browser
       Comment=Minimalist privacy-focused browser from Brave
-      Exec=#{HOMEBREW_PREFIX}/bin/brave-origin %U
+      Exec={{HOMEBREW_PREFIX}}/bin/brave-origin %U
       Terminal=false
       Icon=brave-origin
       Type=Application
@@ -40,11 +40,11 @@ cask "brave-origin-linux" do
 
       [Desktop Action new-window]
       Name=New Window
-      Exec=#{HOMEBREW_PREFIX}/bin/brave-origin
+      Exec={{HOMEBREW_PREFIX}}/bin/brave-origin
 
       [Desktop Action new-private-window]
       Name=New Incognito Window
-      Exec=#{HOMEBREW_PREFIX}/bin/brave-origin --incognito
+      Exec={{HOMEBREW_PREFIX}}/bin/brave-origin --incognito
     EOS
   end
 
