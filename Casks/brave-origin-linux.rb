@@ -18,7 +18,7 @@ cask "brave-origin-linux" do
   artifact "product_logo_256.png",
            target: "#{Dir.home}/.local/share/icons/brave-origin.png"
 
-  preflight do
+  preflight_steps do
     FileUtils.mkdir_p("#{Dir.home}/.local/share/applications")
     FileUtils.mkdir_p("#{Dir.home}/.local/share/icons")
 
