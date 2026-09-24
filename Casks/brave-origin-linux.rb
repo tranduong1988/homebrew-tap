@@ -1,6 +1,6 @@
 cask "brave-origin-linux" do
-  version "1.95.104"
-  sha256 "f43cf2295fc5ec3eeed8f9788c0a86ab0d5c5290fa83692686be7c710408b047"
+  version "1.96.59"
+  sha256 "ad71abea5326d15bbe813a1e9592bcf2383f2ecc083a432313ca80b4436d3797"
 
   url "https://github.com/brave/brave-browser/releases/download/v#{version}/brave-origin-#{version}-linux-amd64.zip"
   name "Brave Origin"
